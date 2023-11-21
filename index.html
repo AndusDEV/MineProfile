@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MineProfile - Home</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <script>
+            function searchUUID() {
+                const uuid = document.getElementById("uuid-input").value;
+                window.location.href = `./player?uuid=${uuid}`;
+            }
+            function searchUser() {
+                const username = document.getElementById("username-input").value;
+                window.location.href = `./player?username=${username}`;
+            }
+        </script>
+
+        <h2>Welcome to MineProfile</h2>
+        <div class="container">
+            <h3>Get information about any existing Minecraft Account</h3>
+            <h3>To get started use one of those options:</h3>
+            <p>Use UUID:</p>
+            <input type="text" id="uuid-input"> <button onclick="searchUUID()">Search</button>
+            <p>Use Username:</p>
+            <input type="text" id="username-input"> <button onclick="searchUser()">Search</button>
+        </div>
+    </body>
+</html>
